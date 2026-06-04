@@ -10,6 +10,8 @@ BOT_TOKEN = os.getenv('BOT_TOKEN')
 SOURCE_CHAT_ID = int(os.getenv('SOURCE_CHAT_ID'))
 DEST_CHAT_ID = int(os.getenv('DEST_CHAT_ID'))
 
+logging.getLogger('telegram').setLevel(logging.WARNING)
+logging.getLogger('httpx').setLevel(logging.WARNING)
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 # =================================================
 
